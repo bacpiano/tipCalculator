@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1IP-ES-ZPW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tip Calculator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VlE-7D-eb6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gxx-dV-h58"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="restaurantBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Xxk-HY-Qdt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-7g-xz1" userLabel="Tip Percentage Segmented Control" customClass="DesignableSegmentedControl" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="290" width="343" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tipPercentageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IuF-TL-VW9"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSw-dg-Nxx" userLabel="Bill Designable View" customClass="DesignableView" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="148" width="343" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZg-6x-NnT" customClass="DesignableLabel" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="39"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="3sb-Xj-HDL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Bill Amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nll-Ya-sQe" userLabel="Bill Amount Text Field" customClass="DesignableTextField" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="109" y="0.0" width="234" height="39"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="va0-nP-28i"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="oZg-6x-NnT" firstAttribute="bottom" secondItem="Nll-Ya-sQe" secondAttribute="bottom" id="2ue-Un-Zcd"/>
+                                    <constraint firstItem="oZg-6x-NnT" firstAttribute="top" secondItem="Nll-Ya-sQe" secondAttribute="top" id="7Sf-pe-0sZ"/>
+                                    <constraint firstItem="oZg-6x-NnT" firstAttribute="top" secondItem="iSw-dg-Nxx" secondAttribute="top" id="R45-6g-x7K"/>
+                                    <constraint firstAttribute="bottom" secondItem="oZg-6x-NnT" secondAttribute="bottom" id="SXM-bo-asw"/>
+                                    <constraint firstItem="oZg-6x-NnT" firstAttribute="leading" secondItem="iSw-dg-Nxx" secondAttribute="leading" id="VXe-se-hEG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nll-Ya-sQe" secondAttribute="trailing" id="cQg-Hu-DMt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7w-6c-HJm" userLabel="Tip Designable View" customClass="DesignableView" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="240" width="343" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF3-bu-nON" customClass="DesignableLabel" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="0.0" width="80" height="24"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="bAd-40-dIW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5n-dM-1mm" userLabel="Tip Amount Label" customClass="DesignableLabel" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="109" y="0.0" width="234" height="24"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vF3-bu-nON" secondAttribute="bottom" id="865-yH-wkm"/>
+                                    <constraint firstItem="vF3-bu-nON" firstAttribute="baseline" secondItem="o5n-dM-1mm" secondAttribute="baseline" id="EGY-YU-go8"/>
+                                    <constraint firstItem="o5n-dM-1mm" firstAttribute="leading" secondItem="vF3-bu-nON" secondAttribute="trailing" constant="28" id="RAi-ss-q62"/>
+                                    <constraint firstAttribute="trailing" secondItem="o5n-dM-1mm" secondAttribute="trailing" id="een-HB-LD5"/>
+                                    <constraint firstItem="vF3-bu-nON" firstAttribute="top" secondItem="A7w-6c-HJm" secondAttribute="top" id="kZA-DR-HNs"/>
+                                    <constraint firstItem="vF3-bu-nON" firstAttribute="leading" secondItem="A7w-6c-HJm" secondAttribute="leading" constant="1" id="yIf-59-Pye"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqw-KS-Eda" userLabel="Total Designable View" customClass="DesignableView" customModule="TipCalculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="409" width="343" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUX-pO-jQo" customClass="DesignableLabel" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="E4p-HA-6EC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-Zz-9R0" userLabel="Total Amount Label" customClass="DesignableLabel" customModule="TipCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="109" y="0.0" width="234" height="34"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="I2g-Zz-9R0" secondAttribute="trailing" id="0Dz-iV-gYR"/>
+                                    <constraint firstItem="I2g-Zz-9R0" firstAttribute="leading" secondItem="qUX-pO-jQo" secondAttribute="trailing" constant="9" id="FXb-QS-Ovw"/>
+                                    <constraint firstItem="qUX-pO-jQo" firstAttribute="baseline" secondItem="I2g-Zz-9R0" secondAttribute="baseline" id="O0s-JV-88Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="qUX-pO-jQo" secondAttribute="bottom" id="etw-1K-gRo"/>
+                                    <constraint firstItem="qUX-pO-jQo" firstAttribute="leading" secondItem="Pqw-KS-Eda" secondAttribute="leading" id="knE-d8-94h"/>
+                                    <constraint firstItem="qUX-pO-jQo" firstAttribute="top" secondItem="Pqw-KS-Eda" secondAttribute="top" id="msO-Z7-gop"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="A7w-6c-HJm" firstAttribute="leading" secondItem="bYV-7g-xz1" secondAttribute="leading" id="2wm-C1-AKG"/>
+                            <constraint firstItem="Xxk-HY-Qdt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Jd-Cv-TSl"/>
+                            <constraint firstItem="bYV-7g-xz1" firstAttribute="leading" secondItem="Pqw-KS-Eda" secondAttribute="leading" id="ABh-lc-ZGu"/>
+                            <constraint firstItem="A7w-6c-HJm" firstAttribute="top" secondItem="iSw-dg-Nxx" secondAttribute="bottom" constant="53" id="Ab5-AN-iVP"/>
+                            <constraint firstItem="bYV-7g-xz1" firstAttribute="top" secondItem="A7w-6c-HJm" secondAttribute="bottom" constant="26" id="GBJ-dn-3Ud"/>
+                            <constraint firstItem="Pqw-KS-Eda" firstAttribute="top" secondItem="bYV-7g-xz1" secondAttribute="bottom" constant="84" id="H24-Sf-VMQ"/>
+                            <constraint firstItem="Xxk-HY-Qdt" firstAttribute="bottom" secondItem="Gxx-dV-h58" secondAttribute="top" id="N44-kJ-AVc"/>
+                            <constraint firstItem="iSw-dg-Nxx" firstAttribute="top" secondItem="VlE-7D-eb6" secondAttribute="bottom" constant="84" id="NB4-ev-hBx"/>
+                            <constraint firstItem="A7w-6c-HJm" firstAttribute="trailing" secondItem="bYV-7g-xz1" secondAttribute="trailing" id="QKz-Vx-KfI"/>
+                            <constraint firstItem="iSw-dg-Nxx" firstAttribute="leading" secondItem="A7w-6c-HJm" secondAttribute="leading" id="UKn-r9-2BO"/>
+                            <constraint firstItem="Xxk-HY-Qdt" firstAttribute="centerX" secondItem="Pqw-KS-Eda" secondAttribute="centerX" id="WgY-Mk-ZeH"/>
+                            <constraint firstItem="bYV-7g-xz1" firstAttribute="trailing" secondItem="Pqw-KS-Eda" secondAttribute="trailing" id="dgb-bG-Zvb"/>
+                            <constraint firstItem="iSw-dg-Nxx" firstAttribute="trailing" secondItem="A7w-6c-HJm" secondAttribute="trailing" id="giM-30-axa"/>
+                            <constraint firstItem="Xxk-HY-Qdt" firstAttribute="top" secondItem="VlE-7D-eb6" secondAttribute="bottom" id="nMy-Xd-7CW"/>
+                            <constraint firstAttribute="trailing" secondItem="Xxk-HY-Qdt" secondAttribute="trailing" id="pMd-65-nWb"/>
+                            <constraint firstItem="Gxx-dV-h58" firstAttribute="top" secondItem="Pqw-KS-Eda" secondAttribute="bottom" constant="224" id="sqy-lR-nFr"/>
+                            <constraint firstItem="iSw-dg-Nxx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tkz-Xi-7uI"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="R5I-g9-lsv" appends="YES" id="DoS-jJ-eEK"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="wQn-t4-esJ"/>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="Nll-Ya-sQe" id="LaW-51-PkM"/>
+                        <outlet property="billLabel" destination="oZg-6x-NnT" id="bf4-nI-AQa"/>
+                        <outlet property="tipAmountLabel" destination="o5n-dM-1mm" id="wJG-RK-Cdg"/>
+                        <outlet property="tipLabel" destination="vF3-bu-nON" id="QJE-Ot-il9"/>
+                        <outlet property="tipPercentageSegmentedControl" destination="bYV-7g-xz1" id="AOH-nX-SOd"/>
+                        <outlet property="totalAmountLabel" destination="I2g-Zz-9R0" id="tLL-hu-bT8"/>
+                        <outlet property="totalLabel" destination="qUX-pO-jQo" id="Sza-Ln-a3t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="R5I-g9-lsv">
+                    <connections>
+                        <action selector="tapOut:" destination="BYZ-38-t0r" id="QYv-gw-Oag"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="348" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KJm-62-U0b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1IP-ES-ZPW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nck-PK-18U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2b6-f3-ZBD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRG-QS-hsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.20000000000005" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="restaurantBackground.jpg" width="1024" height="683"/>
+    </resources>
+</document>
