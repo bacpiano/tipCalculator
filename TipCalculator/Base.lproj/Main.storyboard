@@ -217,6 +217,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbe-ZY-CFX">
+                                <rect key="frame" x="294" y="72" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gEk-9d-syP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -247,6 +255,8 @@
                     <connections>
                         <outlet property="billAmountTextField" destination="Nll-Ya-sQe" id="LaW-51-PkM"/>
                         <outlet property="billLabel" destination="oZg-6x-NnT" id="bf4-nI-AQa"/>
+                        <outlet property="defaultTipSegmentedControl" destination="Htm-gv-W9q" id="CZS-Rb-Dxs"/>
+                        <outlet property="settingsView" destination="Znf-Gk-mP1" id="r9Q-OU-1jI"/>
                         <outlet property="tipAmountLabel" destination="o5n-dM-1mm" id="wJG-RK-Cdg"/>
                         <outlet property="tipLabel" destination="vF3-bu-nON" id="QJE-Ot-il9"/>
                         <outlet property="tipPercentageSegmentedControl" destination="bYV-7g-xz1" id="AOH-nX-SOd"/>
@@ -260,6 +270,50 @@
                         <action selector="tapOut:" destination="BYZ-38-t0r" id="QYv-gw-Oag"/>
                     </connections>
                 </tapGestureRecognizer>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="Znf-Gk-mP1" userLabel="SettingsView" customClass="DesignableView" customModule="TipCalculator" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="default tip percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skD-SB-04u">
+                            <rect key="frame" x="36" y="20" width="169" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Htm-gv-W9q" userLabel="Tip Percentage Segmented Control" customClass="DesignableSegmentedControl" customModule="TipCalculator" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="62" width="240" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <segments>
+                                <segment title="18%"/>
+                                <segment title="20%"/>
+                                <segment title="25%"/>
+                            </segments>
+                            <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="defaultTipChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LPc-XO-4Pa"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </objects>
             <point key="canvasLocation" x="348" y="38.23088455772114"/>
         </scene>

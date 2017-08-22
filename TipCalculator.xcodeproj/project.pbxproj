@@ -9,21 +9,22 @@
 /* Begin PBXBuildFile section */
 		B8492CF01F42A81D00A174CE /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8492CEF1F42A81D00A174CE /* DesignableView.swift */; };
 		B8492CF41F42B04500A174CE /* restaurantBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8492CF31F42B04500A174CE /* restaurantBackground.jpg */; };
+		B87A4A891F4B8AFA00150F3B /* TipCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B87A4A871F4B8AFA00150F3B /* TipCalculator.xcdatamodeld */; };
 		B895E3AA1EFCB8CD00407879 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895E3A91EFCB8CD00407879 /* AppDelegate.swift */; };
 		B895E3AC1EFCB8CD00407879 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895E3AB1EFCB8CD00407879 /* ViewController.swift */; };
 		B895E3AF1EFCB8CD00407879 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B895E3AD1EFCB8CD00407879 /* Main.storyboard */; };
 		B895E3B11EFCB8CD00407879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B895E3B01EFCB8CD00407879 /* Assets.xcassets */; };
 		B895E3B41EFCB8CD00407879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B895E3B21EFCB8CD00407879 /* LaunchScreen.storyboard */; };
-		B8C7910D1F43A65000916CFA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = B8C7910C1F43A65000916CFA /* README.md */; };
 		B8C7910F1F43A7FE00916CFA /* tcDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8C7910E1F43A7FE00916CFA /* tcDemo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B8492CEF1F42A81D00A174CE /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		B8492CF31F42B04500A174CE /* restaurantBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurantBackground.jpg; sourceTree = "<group>"; };
+		B87A4A881F4B8AFA00150F3B /* TipCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TipCalculator.xcdatamodel; sourceTree = "<group>"; };
 		B895E3A61EFCB8CD00407879 /* TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B895E3A91EFCB8CD00407879 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B895E3AB1EFCB8CD00407879 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B895E3AB1EFCB8CD00407879 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B895E3AE1EFCB8CD00407879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B895E3B01EFCB8CD00407879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B895E3B31EFCB8CD00407879 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 				B895E3A91EFCB8CD00407879 /* AppDelegate.swift */,
 				B8492CEF1F42A81D00A174CE /* DesignableView.swift */,
 				B895E3AB1EFCB8CD00407879 /* ViewController.swift */,
+				B87A4A871F4B8AFA00150F3B /* TipCalculator.xcdatamodeld */,
 				B895E3AD1EFCB8CD00407879 /* Main.storyboard */,
 				B8492CF31F42B04500A174CE /* restaurantBackground.jpg */,
 				B895E3B01EFCB8CD00407879 /* Assets.xcassets */,
@@ -153,7 +155,7 @@
 			files = (
 				B895E3AC1EFCB8CD00407879 /* ViewController.swift in Sources */,
 				B895E3AA1EFCB8CD00407879 /* AppDelegate.swift in Sources */,
-				B8C7910D1F43A65000916CFA /* README.md in Sources */,
+				B87A4A891F4B8AFA00150F3B /* TipCalculator.xcdatamodeld in Sources */,
 				B8492CF01F42A81D00A174CE /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +325,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B87A4A871F4B8AFA00150F3B /* TipCalculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B87A4A881F4B8AFA00150F3B /* TipCalculator.xcdatamodel */,
+			);
+			currentVersion = B87A4A881F4B8AFA00150F3B /* TipCalculator.xcdatamodel */;
+			path = TipCalculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B895E39E1EFCB8CD00407879 /* Project object */;
 }
