@@ -69,6 +69,9 @@ class ViewController: UIViewController {
   }
   @IBAction func tapOut(_ sender: UITapGestureRecognizer) {
     view.endEditing(true)
+     if settingsView.isDescendant(of: view) {
+          settingsView.removeFromSuperview()
+     }
   }
   @IBAction func calculateTip(_ sender: UITextField) {
     let bill = Double(billAmountTextField.text!) ?? 0
@@ -132,10 +135,15 @@ class ViewController: UIViewController {
     switch sender.selectedSegmentIndex {
     case 0:
       globalTipPercentageValue = 0.18
+     tipPercentageSegmentedControl.selectedSegmentIndex = 0
     case 1:
       globalTipPercentageValue = 0.20
+      tipPercentageSegmentedControl.selectedSegmentIndex = 1
+
     default:
       globalTipPercentageValue = 0.25
+      tipPercentageSegmentedControl.selectedSegmentIndex = 2
+
     }
     insertData()
     print("data inserted. segmented control has been saved to \(globalTipPercentageValue)")
